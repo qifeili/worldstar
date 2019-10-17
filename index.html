@@ -51,7 +51,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="index.html">首页</a>
+                    <a class="page-scroll" href="index.html">HOME</a>
                 </li>
                 <!--<li>
                     <a class="page-scroll" href="single.html">最新动态</a>
@@ -210,7 +210,7 @@
 
         <div class="<!--col-sm-6--> bg-0">
             <div class="box-text" style="text-align:center">
-                <div class="heading">
+                <div class="heading" id = 'introduce' style="margin: 50px 0px 20px 0px">
                     <h2>联系我们</h2>
                 </div>
                 <p><b>联系电话1：</b><a href="tel:18222966075"><!--<i class="fa fa-phone"></i>-->18222966075 (朱经理)</a>
@@ -232,32 +232,29 @@
 </div>
 
 <footer>
-    <div class="wrap-footer">
+    <div class="wrap-footer" style="height:80px">
         <div class="no-gutter">
             <div class="col-md-6">
-                <div class="box-text">
-                    <div class="footer-heading">
-                        <h5>艺科星空工作室</h5>
-                    </div>
-                </div>
+                <h5 style="margin: 0px 0px 0px 20px"><br>艺科星空工作室<br></h5>
             </div>
-            <!--<div class="col-md-3">
-                <div class="box-text">
-                    <ul class="quick-link list-group">
-                        <li><a href="#">网站备案</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-               <div class="box-text">
-                   <h5>Investment Help</h5>
-                   <ul class="quick-link list-group">
-                       <li><a href="#">Wealth Management</a></li>
-                   </ul>
-               </div>
-           </div>-->
         </div>
-        <div class="clear"></div>
+        <!--<div class="col-md-3">
+            <div class="box-text">
+                <ul class="quick-link list-group">
+                    <li><a href="#">网站备案</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3">
+           <div class="box-text">
+               <h5>Investment Help</h5>
+               <ul class="quick-link list-group">
+                   <li><a href="#">Wealth Management</a></li>
+               </ul>
+           </div>
+       </div>-->
+    </div>
+    <div class="clear"></div>
     </div>
 </footer>
 <!-- Footer -->
@@ -321,6 +318,10 @@
 
         friend_company();
         console.log("加载合作商家板块 done")
+
+        if(!isPhone()){
+            $("#introduce").css("margin","-60px 0px 30px 0px")
+        }
 
         function second_show() {
             $("#second_show").append("<div class=\"col-sm-6 fix-right\" id=\"sencond_pape\">\n" +
@@ -446,9 +447,13 @@
             }
         }
 
+        /*
+
+                style="margin: -200px 100px 25px 0px"
+        */
         function friend_company() {
             if (isPhone()) {
-                $("#friend_company").append("<div class=\"box-content box-5\">\n" +
+                $("#friend_company").append("<div class=\"box-content box-5\" style=\"margin: -50px 0px 20px 0px\">\n" +
                     "            <div style=\"text-align:center\">\n" +
                     "                <h2>合作客户</h2>\n" +
                     "            </div>\n" +
@@ -474,6 +479,8 @@
         }
 
     }
+
+
 
 </script>
 
